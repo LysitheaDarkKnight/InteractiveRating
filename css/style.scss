@@ -1,0 +1,130 @@
+// Colors & Fonts
+
+$text-background-color: rgba(31,38,48,255);
+$text-color: hsl(216, 12%, 54%);
+$main-color: rgba(20,21,25,255);
+$hover-color: hsl(217, 12%, 63%);
+$submit-color: hsl(25, 97%, 53%);
+$submit-click-color: hsl(0, 0%, 100%);
+$img-color: #3d4051;
+$outfit: 'Overpass', sans-serif;
+
+@import 'utilities';
+@import 'functions';
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    background-color: $main-color;
+    font-family: $outfit;
+    font-size: 15px;
+}
+
+// For Both States
+h1{
+    @include set-background($text-background-color);
+    font-size: 28px;
+}
+p{
+    color: $text-color;
+}
+
+.rate-selected{
+    background-color: $hover-color;
+    color: #fff;
+}
+
+
+.main{
+    display: grid;
+    height: 100vh;
+    align-content: center;
+    justify-content: center;
+    .container{
+        background-color: $text-background-color;
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        height: 100%;
+        padding: 30px;
+        gap: 30px;
+        border-radius: 30px;
+
+        // Rating State
+        .icon-star{
+            padding: 15px;
+        }
+
+
+        .feedback{
+            h1{
+                margin-bottom: 10px;
+            }
+        }
+
+        ul{
+            cursor: pointer;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            list-style: none;
+            position: relative;
+            .btn-rating{
+                font-size: 17px;
+                &:hover, &:focus{
+                    @include set-background($submit-color);
+                }
+            }
+
+            
+        }
+        .btn{
+            cursor: pointer;
+            display: inline-block;
+            text-align: center;
+            padding: 10px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+
+            @include set-background($submit-color);
+            &:active{
+                background-color: $submit-click-color;
+                color: $submit-color;
+            }
+        }
+    }
+
+        // Thank you State
+        .thank-you{
+            display: block;
+            width: 170px;
+            margin: auto;
+            padding-top: 15px;
+        }
+
+        .selected{
+            color: $submit-color;
+            background-color: $img-color;
+            display: inline-block;
+            padding: 7px 20px 7px 20px;
+            border-radius: 30px;
+            font-size: 14px;
+            align-self: center;
+        }
+
+        .appreciation-message{
+            p{
+                padding-top: 15px;
+            }
+        }
+        
+    }
