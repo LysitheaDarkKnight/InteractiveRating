@@ -24,8 +24,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: (https://your-solution-url.com)
-- Live Site URL: (https://lysitheadarkknight.github.io/FourCardFeatureSectionMaster/)
+- Solution URL: (https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI/hub/interactive-rating-component-sass-and-js-DtOz2gfgfn
+- Live Site URL: (https://lysitheadarkknight.github.io/InteractiveRating/)
 
 ## My process
 
